@@ -26,6 +26,7 @@ function createCmd(textContent = '') {
 
 // Clear input text
 function clear(e) {
+    main.scrollBy(0, container.scrollHeight)
     e.target.value = '';
 }
 
@@ -64,7 +65,6 @@ input.addEventListener('keypress', (e) => {
             container.innerHTML = '';
             clear(e);
         } else if(cmd === '') {
-            console.log('called');
             container.appendChild(createCmd())
             clear(e);
         } else {
@@ -72,7 +72,6 @@ input.addEventListener('keypress', (e) => {
             container.appendChild(createResult('p', `"${e.target.value}" is not a valid command`))
             clear(e);
         }
-
-        console.log(cmd === '');
+        
     }
 })

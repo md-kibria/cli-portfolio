@@ -5,6 +5,17 @@
     box-sizing: border-box;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(100, 100, 122);
+    border-radius: 5px;
+}
+
 body {
     height: 100vh;
     width: 100vw;
@@ -21,7 +32,12 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 12px;
-    background-image: linear-gradient(to bottom right, red, rgb(185, 67, 87), yellow);
+    background-image: linear-gradient(
+        to bottom right,
+        red,
+        rgb(185, 67, 87),
+        yellow
+    );
 }
 
 #main {
@@ -35,6 +51,7 @@ body {
     line-height: 25px;
     font-size: 13px;
     font-family: consolas;
+    overflow-y: scroll;
 }
 
 .newline {
